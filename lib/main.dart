@@ -81,7 +81,7 @@ class _DicePageState extends State<DicePage> {
               child: Padding(
                 padding: const EdgeInsets.all(30.0),
                 child: Text(
-                  "Roll the Dices",
+                  "Roll the Dice",
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
