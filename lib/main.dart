@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:dicee/styles/buttonstyle.dart';
 import 'package:dicee/widgets/custom_button.dart';
 
-
 void main() {
   return runApp(
     MaterialApp(
@@ -19,7 +18,6 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -29,12 +27,9 @@ class DicePage extends StatelessWidget {
           // flex: 1,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: CustomButton(
-              customCallback: (text) => debugPrint(text),
+            child: CustomButton.custom(
               child: Image.asset('images/dice1.png'),
-              onPressed: () => {print("woooooo")},
-              // style: StylesGuide.defaultStyle.copyWith(
-              //     padding: MaterialStateProperty.all(EdgeInsets.all(5))),
+              onPressed: () => {print("Dice One")},
             ),
           ),
         ),
@@ -42,8 +37,10 @@ class DicePage extends StatelessWidget {
           // flex: 1,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Image(
-              image: AssetImage('images/dice1.png'),
+            child: CustomButton.customTwo(
+              child: Image.asset('images/dice1.png'),
+              onPressed: () => {print("Dice Two")},
+              customCallback: (data) => {print("Custom Callback")}
             ),
           ),
         ),
