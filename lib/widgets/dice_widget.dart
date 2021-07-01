@@ -1,6 +1,7 @@
 import 'package:dicee/styles/button_style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 typedef void StateCallback(String name, int newNum);
 
@@ -36,7 +37,7 @@ class DiceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () => print('You clicked on the $diceName and its showing $diceNum'),
+      onPressed: () => stateCallback(diceName, 6),
       style: StylesGuide.defaultStyle,
       child: Image.asset('images/dice$diceNum.png'),
     );

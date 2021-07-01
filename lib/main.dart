@@ -29,21 +29,26 @@ class DicePage extends StatefulWidget {
 }
 
 class _DicePageState extends State<DicePage> {
+  int leftdicenumber = 3;
+  int rightdicenumber = 2;
+
+  void updateDiceNum(String diceName, int newNum) {
+    print('$diceName, and $newNum');
+    if (diceName == "Left") {
+      setState(() {
+        leftdicenumber = newNum;  
+      });
+    } else if (diceName == "Right") {
+      setState(() {
+        rightdicenumber = newNum;
+      });
+    } else {
+      return;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    int leftdicenumber = 3;
-    int rightdicenumber = 1;
-
-    void updateDiceNum(String diceName, int newNum) {
-      if (diceName == "Left") {
-        leftdicenumber = newNum;
-      } else if (diceName == "Right") {
-        rightdicenumber = newNum;
-      } else {
-        return;
-      }
-    }
-
     return Center(
         child: Row(
       children: <Widget>[
