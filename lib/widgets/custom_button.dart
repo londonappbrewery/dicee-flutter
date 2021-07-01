@@ -44,7 +44,7 @@ class CustomButton extends StatelessWidget {
         key: key,
         child: child,
         onPressed: onPressed,
-        customCallback: (data) => {print('testing')},
+        customCallback: (data) => {print('$data')},
         style: StylesGuide.defaultStyle,
       );
 
