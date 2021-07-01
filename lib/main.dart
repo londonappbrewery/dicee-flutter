@@ -40,7 +40,7 @@ class DicePage extends StatelessWidget {
             child: CustomButton.customTwo(
               child: Image.asset('images/dice1.png'),
               onPressed: () => {print("Dice Two")},
-              customCallback: (data) => {print("Custom Callback")}
+              // customCallback: (data) => {print("$data")}
             ),
           ),
         ),

@@ -2,7 +2,7 @@ import 'package:dicee/styles/buttonstyle.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-typedef CustomCallback = void Function();
+typedef CustomCallback = Set<void> Function(dynamic);
 
 class CustomButton extends StatelessWidget {
   final Widget child;
@@ -43,7 +43,8 @@ class CustomButton extends StatelessWidget {
       CustomButton(
         key: key,
         child: child,
-        onPressed: customCallback,
+        onPressed: onPressed,
+        customCallback: (data) => {print('testing')},
         style: StylesGuide.defaultStyle,
       );
 
