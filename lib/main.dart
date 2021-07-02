@@ -33,10 +33,10 @@ class _DicePageState extends State<DicePage> {
   int rightdicenumber = 2;
 
   void updateDiceNum(String diceName, int newNum) {
-    print('$diceName, and $newNum');
+    // print('$diceName, and $newNum');
     if (diceName == "Left") {
       setState(() {
-        leftdicenumber = newNum;  
+        leftdicenumber = newNum;
       });
     } else if (diceName == "Right") {
       setState(() {

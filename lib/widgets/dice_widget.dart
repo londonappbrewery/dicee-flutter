@@ -11,6 +11,7 @@ class DiceWidget extends StatelessWidget {
   final StateCallback stateCallback;
   final ButtonStyle style;
   final String text;
+  static int rng;
 
   const DiceWidget({
     Key key,
@@ -36,8 +37,13 @@ class DiceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int randomNum;
+
     return TextButton(
-      onPressed: () => stateCallback(diceName, 6),
+      onPressed: () => {
+        randomNum = Random().nextInt(6) + 1,
+        stateCallback(diceName, randomNum)
+        },
       style: StylesGuide.defaultStyle,
       child: Image.asset('images/dice$diceNum.png'),
     );
