@@ -21,4 +21,5 @@ flutter:
   uses-material-design: true
 
   assets:
-  - images/
+  - images/dice1.png
+  - images/dice2.png
